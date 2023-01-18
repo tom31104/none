@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets.css"/>
+    <title>Tính định thức</title>
+</head>
+<body>
+    <div id="contain">
+        <h1 id="title">Tính Định Thức Ma Trận Vuông Cấp N</h1>
+        <div class="content">
+            <div class="pt " > 
+                <h1> Nhập N trong [1;4]:</h1>
+                <br>
+                <input type="text" placeholder="..." id="nhapsoN" class="so backcon">
+                <button onclick="openclose()" id="sendbtn">Send</button>
+                <h2>Nhập ma trận:</h2>
+            </div> 
+            <div class="matran pd">
+                <div class="khung"></div>
+                <div class="mtcap3 mtran">
+                    <input type="text" id="m1" class="so o">
+                    <input type="text" id="m2" class="so o">
+                    <input type="text" id="m3" class="so o">
+                    <br>
+                    <input type="text" id="m4" class="so o">
+                    <input type="text" id="m5" class="so o">
+                    <input type="text" id="m6" class="so o">
+                    <br>
+                    <input type="text" id="m7" class="so o">
+                    <input type="text" id="m8" class="so o">
+                    <input type="text" id="m9" class="so o">
+                    <br>
+                    <button onclick="tinhcap3()" class="sub">Submit</button>
+                </div>
+                <div class="mtcap4 mtran">
+                    <input type="text" id="l1" class="so o">
+                    <input type="text" id="l2" class="so o">
+                    <input type="text" id="l3" class="so o">
+                    <input type="text" id="l4" class="so o">
+                    <br>
+                    <input type="text" id="l5" class="so o">
+                    <input type="text" id="l6" class="so o">
+                    <input type="text" id="l7" class="so o">
+                    <input type="text" id="l8" class="so o">
+                    <br>
+                    <input type="text" id="l9" class="so o">
+                    <input type="text" id="l10" class="so o">
+                    <input type="text" id="l11" class="so o">
+                    <input type="text" id="l12" class="so o">
+                    <br>
+                    <input type="text" id="l13" class="so o">
+                    <input type="text" id="l14" class="so o">
+                    <input type="text" id="l15" class="so o">
+                    <input type="text" id="l16" class="so o">
+                    <br>
+                    <button onclick="tinhcap4()" class="sub">Submit</button>
+                </div>
+                <div class="mtcap2 mtran">
+                    <input type="text" id="k1" class="so o">
+                    <input type="text" id="k2" class="so o">
+                    <br>
+                    <input type="text" id="k3" class="so o">
+                    <input type="text" id="k4" class="so o">
+                    <br>
+                    <button onclick="tinhcap2()" class="sub">Submit</button>
+                </div>
+                <div class="mtcap1 mtran">
+                    <input type="text" id="o1" class="so o">
+                    <br>
+                    <button onclick="tinhcap1()" class="sub">Submit</button>
+                </div>
+                <div class="khung"></div>
+            </div >
+            <div class="results">KẾT QUẢ:
+                <input type="text" id="result" class="so">
+            </div>
+            <div id="foot">Coded by Phú Trần - UIT</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function tinhcap1(){
+            var n1 = document.getElementById('o1').value;
+            var results = parseFloat(n1);
+            document.getElementById('result').value = results;
+        }
+    </script>
+    <script type="text/javascript">
+        function tinhcap4(){
+            var n1 = document.getElementById('l1').value;
+            var n2 = document.getElementById('l2').value;
+            var n3 = document.getElementById('l3').value;
+            var n4 = document.getElementById('l4').value;
+            var n5 = document.getElementById('l5').value;
+            var n6 = document.getElementById('l6').value;
+            var n7 = document.getElementById('l7').value;
+            var n8 = document.getElementById('l8').value;
+            var n9 = document.getElementById('l9').value;
+            var n10 = document.getElementById('l10').value;
+            var n11 = document.getElementById('l11').value;
+            var n12 = document.getElementById('l12').value;
+            var n13 = document.getElementById('l13').value;
+            var n14 = document.getElementById('l14').value;
+            var n15 = document.getElementById('l15').value;
+            var n16 = document.getElementById('l16').value;
+            var results = parseFloat(n1)*(parseFloat(n6)*parseFloat(n11)*parseFloat(n16)+parseFloat(n7)*parseFloat(n12)*parseFloat(n14)+parseFloat(n10)*parseFloat(n15)*parseFloat(n8)-parseFloat(n8)*parseFloat(n11)*parseFloat(n14)-parseFloat(n12)*parseFloat(n15)*parseFloat(n6)-parseFloat(n10)*parseFloat(n7)*parseFloat(n16))
+                        -parseFloat(n2)*(parseFloat(n5)*parseFloat(n11)*parseFloat(n16)+parseFloat(n7)*parseFloat(n12)*parseFloat(n13)+parseFloat(n9)*parseFloat(n15)*parseFloat(n8)-parseFloat(n8)*parseFloat(n11)*parseFloat(n13)-parseFloat(n12)*parseFloat(n15)*parseFloat(n5)-parseFloat(n9)*parseFloat(n7)*parseFloat(n16))
+                        +parseFloat(n3)*(parseFloat(n5)*parseFloat(n10)*parseFloat(n16)+parseFloat(n6)*parseFloat(n12)*parseFloat(n13)+parseFloat(n9)*parseFloat(n14)*parseFloat(n8)-parseFloat(n8)*parseFloat(n10)*parseFloat(n13)-parseFloat(n12)*parseFloat(n14)*parseFloat(n5)-parseFloat(n9)*parseFloat(n6)*parseFloat(n16))
+                        -parseFloat(n4)*(parseFloat(n5)*parseFloat(n10)*parseFloat(n15)+parseFloat(n6)*parseFloat(n11)*parseFloat(n13)+parseFloat(n9)*parseFloat(n14)*parseFloat(n7)-parseFloat(n7)*parseFloat(n10)*parseFloat(n13)-parseFloat(n11)*parseFloat(n14)*parseFloat(n5)-parseFloat(n9)*parseFloat(n6)*parseFloat(n15));
+            document.getElementById('result').value = results;
+        }
+    </script>
+    <script type="text/javascript">
+        function tinhcap3(){
+            var n1 = document.getElementById('m1').value;
+            var n2 = document.getElementById('m2').value;
+            var n3 = document.getElementById('m3').value;
+            var n4 = document.getElementById('m4').value;
+            var n5 = document.getElementById('m5').value;
+            var n6 = document.getElementById('m6').value;
+            var n7 = document.getElementById('m7').value;
+            var n8 = document.getElementById('m8').value;
+            var n9 = document.getElementById('m9').value;
+
+            var results = parseFloat(n1)*parseFloat(n5)*parseFloat(n9)+parseFloat(n2)*parseFloat(n6)*parseFloat(n7)+parseFloat(n3)*parseFloat(n4)*parseFloat(n8)-parseFloat(n3)*parseFloat(n5)*parseFloat(n7)-parseFloat(n2)*parseFloat(n4)*parseFloat(n9)-parseFloat(n8)*parseFloat(n6)*parseFloat(n1);
+            document.getElementById('result').value = results;
+        }
+
+    </script>
+    <script type="text/javascript">
+        function tinhcap2()
+        {
+            var n1 = document.getElementById('k1').value;
+            var n2 = document.getElementById('k2').value;
+            var n3 = document.getElementById('k3').value;
+            var n4 = document.getElementById('k4').value;
+            var results = parseFloat(n1)*parseFloat(n4)-parseFloat(n2)*parseFloat(n3);
+            document.getElementById('result').value = results;
+
+        }
+    </script>
+    <script>
+        function openclose()
+        {
+            var N = document.getElementById('nhapsoN').value;
+            var mt2 = document.querySelector('.mtcap2');
+            var mt3 = document.querySelector('.mtcap3');
+            var mt4 = document.querySelector('.mtcap4');
+            var mt1 = document.querySelector('.mtcap1');
+            var ks = document.querySelectorAll('.khung');
+            if(N=="2") {
+                for (var k of ks){
+                    k.classList.add('open2');
+                }
+                for (var k of ks){
+                    k.classList.remove('open4');
+                }
+                for (var k of ks){
+                    k.classList.remove('open3');
+                }
+                for (var k of ks){
+                    k.classList.remove('open1');
+                }
+                mt2.classList.add('open');
+                mt1.classList.remove('open');
+                mt3.classList.remove('open');
+                mt4.classList.remove('open');
+            }
+            else if(N=="1") {
+                for (var k of ks){
+                    k.classList.add('open1');
+                }
+                for (var k of ks){
+                    k.classList.remove('open2');
+                }
+                for (var k of ks){
+                    k.classList.remove('open3');
+                }
+                for (var k of ks){
+                    k.classList.remove('open4');
+                }
+                mt1.classList.add('open');
+                mt2.classList.remove('open');
+                mt3.classList.remove('open');
+                mt4.classList.remove('open');
+            }
+            else if (N=="3"){
+                for (var k of ks){
+                    k.classList.add('open3');
+                }
+                for (var k of ks){
+                    k.classList.remove('open2');
+                }
+                for (var k of ks){
+                    k.classList.remove('open1');
+                }
+                for (var k of ks){
+                    k.classList.remove('open4');
+                }
+                mt3.classList.add('open');
+                mt1.classList.remove('open');
+                mt2.classList.remove('open');
+                mt4.classList.remove('open');
+            }
+            else if(N=="4") {
+                for (var k of ks){
+                    k.classList.add('open4');
+                }
+                for (var k of ks){
+                    k.classList.remove('open2');
+                }
+                for (var k of ks){
+                    k.classList.remove('open3');
+                }
+                for (var k of ks){
+                    k.classList.remove('open1');
+                }
+                mt4.classList.add('open');
+                mt1.classList.remove('open');
+                mt2.classList.remove('open');
+                mt3.classList.remove('open');
+            }
+            else {
+                alert("Nhập số nguyên trong khoảng từ 1 đến 4");
+            }
+        }
+    </script>
+		<style>
+		*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#title
+{
+    color: cornflowerblue;
+    font-size: 32px;
+    background-color: rgb(31, 21, 67);
+    text-align: center;
+    padding-top: 12px ;
+    padding-bottom: 12px;
+}
+#nhapN
+{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+.contain
+{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.pt{
+    padding-top: 16px;
+}
+.backcon{
+    color: #000 !important;
+    background-color: rgb(255, 255, 255) !important;
+}
+.o{
+    background-color: darkorange !important;
+    margin: 8px 8px;
+
+}
+.content
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(152, 171, 255);
+    position: absolute;
+}
+.matran
+{
+    margin-top: 32px;
+    max-height: 328px;
+    display: inline-flex;
+}
+#sendbtn
+{
+    width: 100px;
+    height: 32px;
+    background-color: black;
+    color: #fff;
+    margin-bottom: 8px;
+}
+#sendbtn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+}
+.so
+{
+    width: 100px;
+    height: 40px;
+    padding: 8px 8px;
+    font-size: 20px;
+    border: none;
+    background-color: #ff0021;
+    color: white;
+    border-radius: 4px;
+}
+.sub
+{
+    margin: 20px;
+    width: 100px;
+    height: 32px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+}
+.sub:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#foot{
+    text-align: center;
+    height: 36px;
+    padding-top: 12px;
+    color: cornflowerblue;
+    background-color: #1f1543;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+}
+.results
+{
+    margin-bottom: 32px;
+}
+#result
+{
+    
+}
+.mtran{
+    min-height: 240px;
+}
+.mtcap1
+{
+    display: none;
+}
+.mtcap1.open{
+    display: block;
+}
+.mtcap2
+{
+    display: none;
+}
+.mtcap2.open{
+    display: block;
+}
+.mtcap3
+{
+    display: none;
+}
+.mtcap3.open{
+    display: block;
+}
+.mtcap4
+{
+    display: none;
+}
+.mtcap4.open{
+    display: block;
+}
+.containMT{
+    display: inline-flex;
+}
+.khung
+{
+    display: none;
+    width: 1px;
+    background-color: #000;
+}
+.khung.open1{
+    display: block;
+    max-height: 60px;
+    max-width: 1px;
+}
+.khung.open2{
+    display: block;
+    max-height: 120px;
+}
+.khung.open3{
+    display: block;
+    max-height: 170px;
+}
+.khung.open4{
+    display: block;
+    max-height: 228px;
+}
+@media (max-width: 480px) {
+.so{
+    width: 69px;
+}
+}
+
+		</style>
+</body>
+</html>
